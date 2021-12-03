@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "426395226933",
+    "project_id": "sugarcane-10d1f",
+    "storage_bucket": "sugarcane-10d1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426395226933:android:ea30cc927b684d8d23327c",
+        "android_client_info": {
+          "package_name": "com.sugarcane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426395226933-du32eq60ov540t23ld21qqb84a9p1j5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR1AAmGOAm93HdU94ZYzQfaS_e7hWkuK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426395226933-du32eq60ov540t23ld21qqb84a9p1j5u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
