@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-
 import {
     Text,
     View,
-    StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
     Alert,
 } from 'react-native';
@@ -18,7 +15,6 @@ import { styles } from '../styles/Gift_styles '
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //放背景圖片
-const { width: WIDTH } = Dimensions.get('window')
 let Gift_state = ''
 class Gift extends Component {
     GetToTheGift = () => {
@@ -75,8 +71,6 @@ class Gift extends Component {
 
         }
     }
-
-
 
     constructor(props) {
         super(props);

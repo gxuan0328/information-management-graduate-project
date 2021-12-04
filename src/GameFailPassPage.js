@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-
 import {
-    Text,
     View,
     StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
 } from 'react-native';
-
 import Failpass_1 from '../img/Failpass/Failpass_1.png';
 import Failpass_2 from '../img/Failpass/Failpass_2.png';
 import Failpass_3 from '../img/Failpass/Failpass_3.png';

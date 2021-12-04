@@ -1,17 +1,11 @@
-/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   Image,
   PanResponder,
   Animated,
-  Alert,
-  LogBox,
   Dimensions,
-  Button,
-  TouchableOpacity,
   ImageBackground,
 } from 'react-native';
 import _ from 'lodash';
@@ -28,7 +22,6 @@ import h_up from '../roads/up_right.jpg';
 import h_down from '../roads/up_left.jpg';
 import horizontal from '../roads/left_right.jpg';
 import straight from '../roads/up_down.jpg';
-import { TestWatcher } from 'jest';
 import TREASURE from '../img/treasure.png';
 import circle from '../img/circle.png';
 import cross from '../img/cross.png';
@@ -180,7 +173,6 @@ const swap = (array, fromIndex, toIndex) => {
   newArray[fromIndex] = array[toIndex];
   newArray[toIndex] = array[fromIndex];
   newArray.splice(fromIndex, 1);
-
   return newArray;
 };
 
@@ -195,7 +187,6 @@ class Game extends Component {
       .doc(this.props.route.params.UserName);
     this.state = {
       key: this.props.route.params.LocationNumber,
-
       player_card: [],
       items: [],
       flag: 0,
@@ -657,7 +648,7 @@ class Game extends Component {
                     });
                   break;
                 case 3:
-                  for (let i = 0 ; i < 2; i++) {
+                  for (let i = 0; i < 2; i++) {
                     newArray.push(cards.pop());
                   }
                   firebase
@@ -878,7 +869,6 @@ class Game extends Component {
 
   addDropzone(dropzone, dropzoneLayout) {
     const { items, dropzones, dropzoneLayouts } = this.state;
-    // HACK: to make sure setting state does not re-add dropzones
   }
 
   inDropzone(gesture, item) {
