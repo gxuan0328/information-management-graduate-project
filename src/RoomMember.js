@@ -62,6 +62,7 @@ export default class flatlisttext extends Component{
                 this.storeData("Gift_state","null") 
             }   
             }, 100) 
+            
 	    }
 	
 	componentWillUnmount(){
@@ -74,6 +75,7 @@ export default class flatlisttext extends Component{
 		detail.forEach((item, index) => {
 			item.photo= this.state.pic[index].photo;
 		})
+
 		this.setState({
 			data: detail,
             players: detail.length,

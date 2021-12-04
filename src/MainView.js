@@ -358,14 +358,19 @@ storeData = async (key,value) => {
                   )}}
                 onLongPress={() => {
                   Alert.alert("參數設定","", [
-                    { text: '取消', onPress: () => console.log('取消') },
-                    { text: '大富概觀', onPress: () => { this.setState({ latitude: 23.605698494140167, longitude: 121.38963503518224 }) } },
                     {
                       text: '清除進度', onPress: () => {
                         this.clearAll();
                       }
-                    }
-                  ])
+                    },
+                    { 
+                      text: '觀看結局', onPress: () => {
+                      this.setState({LocationNumber:8})
+                      this.storeData('Gift_state', 'get')
+                      this.props.navigation.navigate('GameSuccessPassPage')
+                    }},
+                    { text: '大富概觀', onPress: () => { this.setState({ latitude: 23.605698494140167, longitude: 121.38963503518224 }) } },
+                  ], { cancelable: true })
                 }}>
                       <Image source={{uri:this.props.route.params.Picture.photo}} style={styles.ImageHeader}/> 
                       <View style={styles.space}></View>
