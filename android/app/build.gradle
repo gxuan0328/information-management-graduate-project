@@ -140,7 +140,7 @@ android {
     }
     signingConfigs {
         release {
-                storeFile file('my-upload-key.keystore')
+                storeFile file('my-release-key.keystore')
                 storePassword 'sugarcane'
                 keyAlias 'my-key-alias'
                 keyPassword 'sugarcane'
