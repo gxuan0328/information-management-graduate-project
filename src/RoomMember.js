@@ -62,7 +62,7 @@ export default class flatlisttext extends Component{
                 this.storeData("Gift_state","null") 
             }   
             }, 100) 
-            
+
 	    }
 	
 	componentWillUnmount(){
@@ -119,7 +119,7 @@ export default class flatlisttext extends Component{
         let name_save=this.readValue('name_save')
         let room_save=this.readValue('room_save')
 
-
+        this.storeData('picture', this.state.picture)
         this . timer =setTimeout (()=> { 
         if ((this.props.route.params.UserName!==name_save._W)||(this.props.route.params.RoomNum!==room_save._W)){
             this.storeData('Progress_save','0')
@@ -130,9 +130,9 @@ export default class flatlisttext extends Component{
             this.removeValue('response_uri_3')
             this.storeData('room_save',this.props.route.params.RoomNum)
             this.storeData('name_save',this.props.route.params.UserName)
-            this.props.navigation.navigate('GameStory', {RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName,Players: this.state.players, Picture:this.state.picture})
+            this.props.navigation.navigate('GameStory', {RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName,Players: this.state.players})
         }else{
-            this.props.navigation.navigate('MainView', {RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName,Players: this.state.players, Picture:this.state.picture})
+            this.props.navigation.navigate('MainView', {RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName,Players: this.state.players})
         }
 
       }, 100)

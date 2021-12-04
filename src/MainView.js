@@ -82,7 +82,13 @@ storeData = async (key,value) => {
   }
 
   
-    componentDidMount(){
+    async componentDidMount(){
+      let pic = await this.readValue('picture')
+      this.setState({picture:pic})
+      console.log('picture', pic.photo)
+      console.log('picture', this.state.picture.photo)
+      
+
       Geolocation.getCurrentPosition (
         position=>{
         this.setState({
@@ -192,6 +198,7 @@ storeData = async (key,value) => {
     constructor(props){
       super(props);
       this.state={
+        picture:{},
         point_lat:0,
         point_lon:0,
 
@@ -372,7 +379,7 @@ storeData = async (key,value) => {
                     { text: '大富概觀', onPress: () => { this.setState({ latitude: 23.605698494140167, longitude: 121.38963503518224 }) } },
                   ], { cancelable: true })
                 }}>
-                      <Image source={{uri:this.props.route.params.Picture.photo}} style={styles.ImageHeader}/> 
+                <Image source={{uri:this.state.picture.photo}} style={styles.ImageHeader}/> 
                       <View style={styles.space}></View>
                       <View style={styles.Roomnum}>
                           <Text style={styles.IDtext}>房號:{this.props.route.params.RoomNum}

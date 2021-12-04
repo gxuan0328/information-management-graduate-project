@@ -182,7 +182,7 @@ class CreatRoom extends Component{
             })
             .catch((err) => {
               console.error("Error found: ", err);
-              alert('房間不存在')
+              alert('系統錯誤')
               this.setState({
                 isLoading: false,
               });
@@ -193,35 +193,68 @@ class CreatRoom extends Component{
       }
 
       searchRoom(){
-        if(this.state.name === ''){
-         alert('Fill your name!')
+        if(this.state.name === '' || this.state.room ===''){
+         alert('請輸入姓名與房號!')
         } else {
           this.setState({
             isLoading: true,
           });
-          let player = this.state.name;      
-          this.dbRef.doc(this.state.room).update({
-            member: firebase.firestore.FieldValue.arrayUnion({name: this.state.name}),
-            order: firebase.firestore.FieldValue.arrayUnion(this.state.name),
-          })
-          .then(this.dbRef.doc(this.state.room).collection('Card').doc(player).set({
-            list: [],
-          }))
-          .then(() => {
-            this.setState({
-              isLoading: false,
-            });
-            this.props.navigation.navigate('RoomMember', { RoomNum: this.state.room, UserName: this.state.name })
-          })
-          .catch((err) => {
+
+          this.dbRef.doc(this.state.room).get().then(async(doc) => {
+            let name_save = await this.readValue('name_save')
+            let room_save = await this.readValue('room_save')
+            console.log('AAA', name_save,room_save)
+            console.log('AAA', this.state.name, this.state.room)
+              if ((this.state.name == name_save) && (this.state.room == room_save)) {
+                console.log('BBB', name_save, room_save)
+                this.props.navigation.navigate('MainView', { RoomNum: this.state.room, UserName: this.state.name, Players: doc.data().order.length })
+                return
+              }
+              else{
+                console.log('CCC', name_save, room_save)
+                if (doc.data().order.length >= 4) {
+                  alert('遊戲人數已滿')
+                  return
+                }
+
+                let player = this.state.name;
+                this.dbRef.doc(this.state.room).update({
+                  member: firebase.firestore.FieldValue.arrayUnion({ name: this.state.name }),
+                  order: firebase.firestore.FieldValue.arrayUnion(this.state.name),
+                })
+                  .then(this.dbRef.doc(this.state.room).collection('Card').doc(player).set({
+                    list: [],
+                  }))
+                  .then(() => {
+                    this.setState({
+                      isLoading: false,
+                    });
+                    this.props.navigation.navigate('RoomMember', { RoomNum: this.state.room, UserName: this.state.name })
+                  })
+                  .catch((err) => {
+                    console.error("Error found: ", err);
+                    alert('房間不存在')
+                    this.setState({
+                      isLoading: false,
+                    });
+                  });
+              }
+
+          }).then(() => {
+            console.log('OKKKKKKKKKK')
+              this.setState({
+                isLoading: false,
+              });
+          }).catch((err) => {
             console.error("Error found: ", err);
-            alert('房間不存在')
+            alert('房間不存在，請先創建房間')
             this.setState({
               isLoading: false,
             });
           });
         }
       }
+
 
       //設定寶藏位置
       Treasure(){
