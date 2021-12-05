@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-
 import {
-    Text,
     View ,
     StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
 } from 'react-native';
 import  temple_1 from './image/temple_1.png';

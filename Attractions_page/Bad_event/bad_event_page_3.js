@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-
 import {
-    Text,
     View ,
     StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
 } from 'react-native';
-
 import bad_event_3 from'./bad_event_3.png';
-
 const {width:WIDTH}=Dimensions.get('window')
 class bad_event_page_3 extends Component{
 

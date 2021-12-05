@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 
 import {
-    Text,
     View ,
     StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
-    BackHandler,
-
 } from 'react-native';
 import  station_1_1 from './image/station_1_1.png';
 import  station_1_2 from './image/station_1_2.png';

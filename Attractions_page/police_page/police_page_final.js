@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-
 import {
-    Text,
     View ,
     StyleSheet,
     ImageBackground,
     Image,
-    TextInput,
     Dimensions, TouchableOpacity,
 } from 'react-native';
 

@@ -109,10 +109,9 @@ class MainView extends Component {
           Nowlon: Number(position.coords.longitude),
         }
         );
-        console.log(this.state.latitude, this.state.longitude);
         this.Location_judgment()
       }, error => this.setState({ error: error.message }),
-      { enableHighAccuracy: true, distanceFilter: 3 }
+      { enableHighAccuracy: true, distanceFilter: 0 }
     );
 
   }
