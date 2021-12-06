@@ -43,7 +43,7 @@ class GameStory extends Component {
 
     Nextimage = () => {
         if (this.state.imagepage == (this.state.image.length - 1)) {
-            this.props.navigation.navigate('MainView', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.props.route.params.Players, Picture: this.props.route.params.Picture, })
+            this.props.navigation.navigate('MainView', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.props.route.params.Players })
         }
         this.setState({
             imagepage: (Number(this.state.imagepage) + 1)

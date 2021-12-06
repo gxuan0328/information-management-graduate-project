@@ -111,7 +111,7 @@ class MainView extends Component {
         );
         this.Location_judgment()
       }, error => this.setState({ error: error.message }),
-      { enableHighAccuracy: true, distanceFilter: 0 }
+      { enableHighAccuracy: true, distanceFilter: 1 }
     );
 
   }
