@@ -905,6 +905,1819 @@ class Game extends Component {
         items[dropzone - 1] == 0 &&
         items[dropzone + 1] == 0)
     ) {
+    } else if (dropzone == 8 || dropzone == 10 || dropzone == 12){
+      switch(dropzone){
+        case 8:
+          if (items[dropzone + 1] == 0 && items[dropzone + 7] == 0){
+            break;
+          }
+          else{
+            switch (item) {
+              case 1:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  flag = true;
+                  break;
+                }
+              case 2:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 3:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 4:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 5:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] == 0 || items[dropzone + 7] != 0) &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] != 0 || items[dropzone + 7] == 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 6:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] != 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 7:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] != 0 &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 8:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] != 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 9:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] != 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 10:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    (items[dropzone - 7] != 0 || items[dropzone + 7] == 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    (items[dropzone - 7] == 0 || items[dropzone + 7] != 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 11:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+            }
+          }
+        
+        case 10:
+          if (items[dropzone - 1] == 0 && items[dropzone + 1] == 0 && items[dropzone + 7] == 0) {
+            break;
+          }
+          else {
+            switch (item) {
+              case 1:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  flag = true;
+                  break;
+                }
+              case 2:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 3:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 4:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 5:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] == 0 || items[dropzone + 7] != 0) &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] != 0 || items[dropzone + 7] == 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 6:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] != 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 7:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] != 0 &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 8:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] != 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 9:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] != 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 10:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    (items[dropzone - 7] != 0 || items[dropzone + 7] == 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    (items[dropzone - 7] == 0 || items[dropzone + 7] != 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 11:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+            }
+          }
+        case 12:
+          if (items[dropzone - 1] == 0 && items[dropzone + 7] == 0) {
+            break;
+          }
+          else {
+            switch (item) {
+              case 1:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  flag = true;
+                  break;
+                }
+              case 2:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 3:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone - 7] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 4:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] != 0 || items[dropzone - 1] == 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    (items[dropzone + 7] == 0 || items[dropzone - 1] != 0) &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 5:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] == 0 || items[dropzone + 7] != 0) &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    (items[dropzone + 1] != 0 || items[dropzone + 7] == 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 6:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] != 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 7:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] != 0 &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 1)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 8:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] != 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 9:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] != 0 &&
+                    items[dropzone + 7] == 0 &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 10:
+                if (
+                  items[dropzone - 7] == 1 ||
+                  items[dropzone - 7] == 2 ||
+                  items[dropzone - 7] == 3 ||
+                  items[dropzone - 7] == 6 ||
+                  items[dropzone - 7] == 7 ||
+                  items[dropzone - 7] == 9 ||
+                  items[dropzone - 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 1 ||
+                  items[dropzone + 7] == 4 ||
+                  items[dropzone + 7] == 5 ||
+                  items[dropzone + 7] == 6 ||
+                  items[dropzone + 7] == 7 ||
+                  items[dropzone + 7] == 8 ||
+                  items[dropzone + 7] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 3 ||
+                  items[dropzone - 1] == 5 ||
+                  items[dropzone - 1] == 7 ||
+                  items[dropzone - 1] == 11
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 2 ||
+                  items[dropzone + 1] == 4 ||
+                  items[dropzone + 1] == 6 ||
+                  items[dropzone + 1] == 11
+                ) {
+                  break;
+                } else {
+                  if (
+                    (items[dropzone - 7] != 0 || items[dropzone + 7] == 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone - 7] == 4 ||
+                      items[dropzone - 7] == 5 ||
+                      items[dropzone - 7] == 8 ||
+                      items[dropzone - 7] == 10)
+                  ) {
+                    break;
+                  } else if (
+                    (items[dropzone - 7] == 0 || items[dropzone + 7] != 0) &&
+                    items[dropzone - 1] == 0 &&
+                    items[dropzone + 1] == 0 &&
+                    (items[dropzone + 7] == 2 ||
+                      items[dropzone + 7] == 3 ||
+                      items[dropzone + 7] == 9 ||
+                      items[dropzone + 7] == 10)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+              case 11:
+                if (
+                  items[dropzone - 7] == 4 ||
+                  items[dropzone - 7] == 5 ||
+                  items[dropzone - 7] == 8 ||
+                  items[dropzone - 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 7] == 2 ||
+                  items[dropzone + 7] == 3 ||
+                  items[dropzone + 7] == 9 ||
+                  items[dropzone + 7] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone - 1] == 1 ||
+                  items[dropzone - 1] == 2 ||
+                  items[dropzone - 1] == 4 ||
+                  items[dropzone - 1] == 6 ||
+                  items[dropzone - 1] == 8 ||
+                  items[dropzone - 1] == 9 ||
+                  items[dropzone - 1] == 10
+                ) {
+                  break;
+                } else if (
+                  items[dropzone + 1] == 1 ||
+                  items[dropzone + 1] == 3 ||
+                  items[dropzone + 1] == 5 ||
+                  items[dropzone + 1] == 7 ||
+                  items[dropzone + 1] == 8 ||
+                  items[dropzone + 1] == 9 ||
+                  items[dropzone + 1] == 10
+                ) {
+                  break;
+                } else {
+                  if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] != 0 || items[dropzone + 1] == 0) &&
+                    (items[dropzone - 1] == 3 ||
+                      items[dropzone - 1] == 5 ||
+                      items[dropzone - 1] == 7 ||
+                      items[dropzone - 1] == 11)
+                  ) {
+                    break;
+                  } else if (
+                    items[dropzone - 7] == 0 &&
+                    items[dropzone + 7] == 0 &&
+                    (items[dropzone - 1] == 0 || items[dropzone + 1] != 0) &&
+                    (items[dropzone + 1] == 2 ||
+                      items[dropzone + 1] == 4 ||
+                      items[dropzone + 1] == 6 ||
+                      items[dropzone + 1] == 11)
+                  ) {
+                    break;
+                  } else {
+                    flag = true;
+                    break;
+                  }
+                }
+            }
+          }
+      }
     } else {
       switch (item) {
         case 1:
@@ -1494,7 +3307,7 @@ class Game extends Component {
               (items[dropzone + 1] == 2 ||
                 items[dropzone + 1] == 4 ||
                 items[dropzone + 1] == 6 ||
-                items[dropzone + 1] == 1)
+                items[dropzone + 1] == 11)
             ) {
               break;
             } else {
@@ -1774,9 +3587,3 @@ const styles = StyleSheet.create({
 });
 
 export default Game;
-
-//嚴重的擔心，遊戲在實機上的執行效果是否會造成卡頓，這周可先進行上機測試，不然可能須著手處理Release內的運算量
-//目前將洗牌、新增牌、刪除牌(阻擋效果)，以按鍵套function的方式作呈現，未來可由外部傳入指定參數進行執行
-//目前須規劃需牌的指令需放於何處執行，目前尚未找到哪個地方是在這個畫面中從頭到尾只會被render一次的，滿困擾的
-//目前尚需確認我們遊戲進行時各種卡牌的總數，以及三向牌的形象重製
-//以上，若有缺少的提出進行補充

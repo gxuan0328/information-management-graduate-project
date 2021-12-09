@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   BackHandler,
-  Image
+  Image,
+  Alert
 } from 'react-native';
 import firebase from '../database/firebaseDB'
 import { styles } from '../styles/CreatRoom_styles'
@@ -66,8 +67,10 @@ class CreatRoom extends Component {
   }
 
   createRoom() {
-    if (this.state.name === '') {
-      alert('Fill your name!')
+    if (this.state.name === '' || this.state.room === '') {
+      Alert.alert('提醒', '請輸入姓名與房號!')
+    } else if (this.state.room.length < 4) {
+      Alert.alert('提醒', '請輸入四位數字房號')
     } else {
       this.setState({
         isLoading: true,
@@ -191,7 +194,9 @@ class CreatRoom extends Component {
 
   searchRoom() {
     if (this.state.name === '' || this.state.room === '') {
-      alert('請輸入姓名與房號!')
+      Alert.alert('提醒','請輸入姓名與房號!')
+    } else if (this.state.room.length < 4){
+      Alert.alert('提醒', '請輸入四位數字房號')
     } else {
       this.setState({
         isLoading: true,
@@ -383,6 +388,8 @@ class CreatRoom extends Component {
                 placeholderTextColor={'#8e8880'}
                 value={this.state.room}
                 onChangeText={(val) => this.inputValueUpdate(val, 'room')}
+                keyboardType="numeric"
+                maxLength={4}
               />
             </View>
             {/* 輸入ID的輸入框*/}

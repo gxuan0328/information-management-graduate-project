@@ -178,33 +178,23 @@ class MainView extends Component {
       point_lat: 0,
       point_lon: 0,
 
-      latitude: 23.897781271357665,
-      longitude: 121.54017904379525,
+      latitude: 23.605698494140167,
+      longitude: 121.38963503518224,
       error: null,
       Nowlat: 0,
       Nowlon: 0,
       LocationNumber: 0,
-      //大富景點座標
-      // Attractions:[
-      //   23.605698494140167, 121.38963503518224,
-      //   23.605637189234383, 121.39038233209047,
-      //   23.60507549710492, 121.39067582373123,
-      //   23.60555356085042, 121.39244634290118,
-      //   23.605602652654742, 121.39128997707203,
-      //   23.605683741823935, 121.39002465320216,
-      //   23.606265155086312, 121.39055006400037,
-      //   23.60710820458588, 121.39074800682278]
+      Attractions:[
+        23.605698494140167, 121.38963503518224,
+        23.605637189234383, 121.39038233209047,
+        23.60507549710492, 121.39067582373123,
+        23.60555356085042, 121.39244634290118,
+        23.605602652654742, 121.39128997707203,
+        23.605683741823935, 121.39002465320216,
+        23.606265155086312, 121.39055006400037,
+        23.60710820458588, 121.39074800682278]
 
-      //管院測試座標
-      Attractions: [
-        23.89789597185507, 121.53962346141924,
-        23.897419180887876, 121.53986395579356,
-        23.89789597185507, 121.53962346141924,
-        23.897419180887876, 121.53986395579356,
-        23.89789597185507, 121.53962346141924,
-        23.897419180887876, 121.53986395579356,
-        23.89789597185507, 121.53962346141924,
-        23.897419180887876, 121.53986395579356]
+      
 
     }
   }
@@ -238,36 +228,8 @@ class MainView extends Component {
             latitudeDelta: 0.0032922,
             longitudeDelta: 0.000821,
           }}
-
         >
 
-
-          <Marker
-            coordinate={{ latitude: 23.897859215126708, longitude: 121.53963959301575, }}
-            calloutOffset={{ x: -8, y: 28 }}
-            calloutAnchor={{ x: 0.5, y: 0.4 }}
-            image={station}>
-            <Callout tooltip={true}>
-              <View style={styles.marker_frame}>
-                <Text style={styles.marker_text_1}>大富車站</Text>
-                <Text style={styles.marker_text_2}>大富車站距離光復車站僅一站，每日會有數班區間車停靠，站內已無售票員，故採特別的「先上車後補票」制度。當地居民對車站的閒置空間發起了認養，並佈滿了裝置藝術、，希望旅人能心體會這座充滿情懷的車站。</Text>
-              </View>
-            </Callout>
-          </Marker>
-
-
-          <Marker
-            coordinate={{ latitude: 23.897347234006276, longitude: 121.53990235150802, }}
-            image={school}><Callout tooltip={true}>
-              <View style={styles.marker_frame}>
-                <Text style={styles.marker_text_1}>大富國小</Text>
-                <Text style={styles.marker_text_2}>大富國小已有七八十年的歷史，隨著街道的繁榮不再，國小也因師生人數不足而併校，如今由大富社區發展協會接手後，創立嘎嘎啷創克基地，期望能和一同進駐的其他單位打造永續教育的場所</Text>
-              </View>
-            </Callout>
-
-          </Marker>
-
-          {/* //////////////////////////////////////// */}
 
           <Marker
             coordinate={{ latitude: 23.605698494140167, longitude: 121.38963503518224 }}
@@ -327,23 +289,6 @@ class MainView extends Component {
                 }, error => this.setState({ error: error.message }),
                 { enableHighAccuracy: true }
               )
-            }}
-            onLongPress={() => {
-              Alert.alert("參數設定", "", [
-                {
-                  text: '清除進度', onPress: () => {
-                    this.clearAll();
-                  }
-                },
-                {
-                  text: '觀看結局', onPress: () => {
-                    this.setState({ LocationNumber: 8 })
-                    this.storeData('Gift_state', 'get')
-                    this.props.navigation.navigate('GameSuccessPassPage')
-                  }
-                },
-                { text: '大富概觀', onPress: () => { this.setState({ latitude: 23.605698494140167, longitude: 121.38963503518224 }) } },
-              ], { cancelable: true })
             }}>
             <Image source={{ uri: this.state.picture.photo }} style={styles.ImageHeader} />
             <View style={styles.space}></View>
