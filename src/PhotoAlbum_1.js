@@ -6,6 +6,7 @@ import {
   Image,
   Dimensions, 
   TouchableOpacity,
+  PermissionsAndroid,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import BGImage from '../img/background.jpg';
@@ -124,7 +125,6 @@ class PhotoAlbum_1 extends Component {
       },
         (response) => {
           try {
-
             this.setState({
               response_uri: response.assets[0].uri,
               response_image: response.assets[0].uri,

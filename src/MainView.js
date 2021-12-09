@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Alert,
   BackHandler,
+  PermissionsAndroid,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import MapView, { Marker, Callout } from 'react-native-maps';
@@ -65,6 +66,11 @@ class MainView extends Component {
   }
 
   async componentDidMount() {
+    await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.CAMERA)
+    await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE)
+    await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE)
+    await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION)
+    await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION)
     let pic = await this.readValue('picture')
     this.setState({ picture: pic })
 

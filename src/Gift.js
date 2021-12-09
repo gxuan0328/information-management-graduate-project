@@ -32,6 +32,9 @@ class Gift extends Component {
                     { text: '取消', onPress: () => console.log('取消') }
                 ])
             }
+            else{
+                Alert.alert('提示','趕快完成遊戲，來獲得精美禮品吧!')
+            }
         }, 10)
     }
     componentDidMount() {
@@ -85,17 +88,13 @@ class Gift extends Component {
             <ImageBackground source={BGImage} style={styles.backgroundContainer}>
 
                 <View style={styles.Header}>
-                    <TouchableOpacity style={styles.button}
-                        onPress={() => { this.GetToTheGift() }}>
-                        <Text style={styles.Text}>兌換禮物</Text>
-                    </TouchableOpacity>
-
+                    <Text style={styles.Text}>兌換禮物</Text>
                 </View>
 
                 <View style={styles.main}>
-                    <Image source={this.state.image} style={styles.Giftimg} />
-
-
+                    <TouchableOpacity onPress={() => { this.GetToTheGift() }}>
+                        <Image source={this.state.image} style={styles.Giftimg} />
+                    </TouchableOpacity>
                 </View>
 
                 <View style={styles.footer}>
