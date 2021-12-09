@@ -115,24 +115,22 @@ export default class flatlisttext extends Component {
         let name_save = this.readValue('name_save')
         let room_save = this.readValue('room_save')
 
-        this.timer = setTimeout(() => {
-            if ((this.props.route.params.UserName !== name_save._W) || (this.props.route.params.RoomNum !== room_save._W)) {
-                this.storeData('picture', this.state.picture)
-                this.storeData('Progress_save', '0')
-                this.storeData('MainView_Finsh', 'null')
-                this.storeData('GameMap_Finsh', 'null')
-                this.removeValue('response_uri_1')
-                this.removeValue('response_uri_2')
-                this.removeValue('response_uri_3')
-                this.storeData('room_save', this.props.route.params.RoomNum)
-                this.storeData('name_save', this.props.route.params.UserName)
-                this.props.navigation.navigate('GameStory', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.state.players })
-            } else {
-                this.storeData('picture', this.state.picture)
-                this.props.navigation.navigate('MainView', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.state.players })
-            }
 
-        }, 100)
+        if ((this.props.route.params.UserName !== name_save._W) || (this.props.route.params.RoomNum !== room_save._W)) {
+            this.storeData('picture', this.state.picture)
+            this.storeData('Progress_save', '0')
+            this.storeData('MainView_Finsh', 'null')
+            this.storeData('GameMap_Finsh', 'null')
+            this.removeValue('response_uri_1')
+            this.removeValue('response_uri_2')
+            this.removeValue('response_uri_3')
+            this.storeData('room_save', this.props.route.params.RoomNum)
+            this.storeData('name_save', this.props.route.params.UserName)
+            this.props.navigation.navigate('GameStory', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.state.players })
+        } else {
+            this.storeData('picture', this.state.picture)
+            this.props.navigation.navigate('MainView', { RoomNum: this.props.route.params.RoomNum, UserName: this.props.route.params.UserName, Players: this.state.players })
+        }
     }
 
 
